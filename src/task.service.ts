@@ -11,6 +11,7 @@ export class TaskService {
   handleCron() {
     const now = new Date();
     const strNow = this.convertDateToStr(now);
+    //TODO: get all jobs from actual database.
     jobs
       .filter((j) => j.sendAt)
       .map((job) => {
